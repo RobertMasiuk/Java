@@ -12,10 +12,10 @@ import org.jsoup.select.Elements;
 import org.jsoup.select.Selector;
 
 /**
- * @author Robert Masiuk
+ * @author Robert Masiuk  robert@masiuk.pl
  */
 public class JsoupTemperatureFromWebside {
-     
+
     public static void main(String[] args) throws IOException {
         for (int i = 1; i < 10; i++) {
             try {
@@ -27,7 +27,7 @@ public class JsoupTemperatureFromWebside {
                     //  Elements temperature  = document.select("#weatherMainWidget > div.widgetContent > div.underSearchBox > div:nth-child(1) > div.mainBox.widgetLeftCol > div.mainBoxContent > div.mainParams > div.temperature > div.feelTemp > span.feelTempValue");
                     Elements temperature = document.select("#weatherMainWidget > div.widgetContent > div.underSearchBox > div:nth-child(1) > div.mainBox.widgetLeftCol > div.mainBoxContent > div.mainParams > div.temperature > div.temp");
                     for (Element elem : temperature) {
-                        System.out.println("Temperatura w Gdyni wynosi: " + elem.text());
+                        System.out.println("temperature in Gdynia is: " + elem.text());
                     }
 
                 } catch (IOException e) {
