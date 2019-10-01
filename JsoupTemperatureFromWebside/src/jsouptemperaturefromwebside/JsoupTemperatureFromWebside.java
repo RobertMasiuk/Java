@@ -23,8 +23,8 @@ public class JsoupTemperatureFromWebside {
                 try {
                     Connection connect = Jsoup.connect("https://pogoda.onet.pl/prognoza-pogody/gdynia-287798");
                     Document document = connect.get();
-                    Elements temperature  = document.select("#weatherMainWidget > div.widgetContent > div.underSearchBox > div:nth-child(1) > div.mainBox.widgetLeftCol > div.mainBoxContent > div.mainParams > div.temperature > div.feelTemp > span.feelTempValue");
-                    //Elements temperature = document.select("#weatherMainWidget > div.widgetContent > div.underSearchBox > div:nth-child(1) > div.mainBox.widgetLeftCol > div.mainBoxContent > div.mainParams > div.temperature > div.temp");
+                    //Elements temperature  = document.select("#weatherMainWidget > div.widgetContent > div.underSearchBox > div:nth-child(1) > div.mainBox.widgetLeftCol > div.mainBoxContent > div.mainParams > div.temperature > div.feelTemp > span.feelTempValue");
+                    Elements temperature = document.select("#weatherMainWidget > div.widgetContent > div.underSearchBox > div:nth-child(1) > div.mainBox.widgetLeftCol > div.mainBoxContent > div.mainParams > div.temperature > div.temp");
                     for (Element elem : temperature) {
                         System.out.println("temperature in Gdynia is: " + elem.text());
                     }
